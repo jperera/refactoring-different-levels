@@ -17,7 +17,7 @@ public class PictureController {
     }
 
     @GetMapping("/pictures/{id}")
-    Picture get(@PathVariable Long id) {
+    Picture get(@PathVariable Integer id) {
         return repository.findById(id)
                 .orElseThrow(() -> new PictureNotFoundException());
     }
@@ -28,7 +28,7 @@ public class PictureController {
     }
 
     @PutMapping("/pictures/{id}")
-    Picture replacePicture(@RequestBody Picture newPicture, @PathVariable Long id) {
+    Picture replacePicture(@RequestBody Picture newPicture, @PathVariable Integer id) {
         return repository.findById(id)
                 .map(existingPicture -> {
                     existingPicture.setPosition(newPicture.getPosition());
@@ -40,7 +40,7 @@ public class PictureController {
     }
 
     @DeleteMapping("/pictures/{id}")
-    void deletePicture(@PathVariable Long id) {
+    void deletePicture(@PathVariable Integer id) {
         repository.deleteById(id);
     }
 }

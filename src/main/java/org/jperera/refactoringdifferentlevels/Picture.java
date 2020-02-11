@@ -9,7 +9,7 @@ public class Picture {
 
     private @Id @GeneratedValue Integer id;
     private String title;
-    private String position;
+    private Integer position;
     private String url;
 
     public Integer getId() {
@@ -28,11 +28,11 @@ public class Picture {
         this.title = title;
     }
 
-    public String getPosition() {
+    public Integer getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(Integer position) {
         this.position = position;
     }
 
