@@ -25,7 +25,7 @@ class RefactoringDifferentLevelsApplicationTests {
 	private MockMvc mockMvc;
 
 	@Test
-	void getOnePicture() throws Exception {
+	void getOnePreviousCreatedPicture() throws Exception {
 		String response = mockMvc.perform(
 				post("/pictures")
 						.contentType(MediaType.APPLICATION_JSON)
