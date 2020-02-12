@@ -1,4 +1,4 @@
-package org.jperera.refactoringdifferentlevels;
+package org.jperera.refactoringdifferentlevels.testhelpers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -8,16 +8,16 @@ public class PictureResponseReader {
 
     private JsonNode jsonRoot;
 
-    static PictureResponseReader reader(String response) throws JsonProcessingException {
+    public static PictureResponseReader reader(String response) throws JsonProcessingException {
         return new PictureResponseReader(response);
     }
 
-    PictureResponseReader(String response) throws JsonProcessingException {
+    public PictureResponseReader(String response) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         this.jsonRoot = objectMapper.readTree(response);
     }
 
-    Integer id() {
+    public Integer id() {
         return jsonRoot.get("id").asInt();
     }
 

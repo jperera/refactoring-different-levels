@@ -1,6 +1,5 @@
 package org.jperera.refactoringdifferentlevels;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -10,8 +9,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.jperera.refactoringdifferentlevels.PictureRequestBuilder.aRequest;
-import static org.jperera.refactoringdifferentlevels.PictureResponseReader.reader;
+import static org.jperera.refactoringdifferentlevels.testhelpers.PictureRequestBuilder.aRequest;
+import static org.jperera.refactoringdifferentlevels.testhelpers.PictureResponseReader.reader;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -19,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class RefactoringDifferentLevelsApplicationTests {
+class StartPointTests {
 
 	@Autowired
 	private MockMvc mockMvc;

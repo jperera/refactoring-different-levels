@@ -10,8 +10,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.jperera.refactoringdifferentlevels.PictureRequestBuilder.aRequest;
-import static org.jperera.refactoringdifferentlevels.PictureResponseReader.reader;
+import static org.jperera.refactoringdifferentlevels.testhelpers.PictureRequestBuilder.aRequest;
+import static org.jperera.refactoringdifferentlevels.testhelpers.PictureResponseReader.reader;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
