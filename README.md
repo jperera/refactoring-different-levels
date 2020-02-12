@@ -8,7 +8,7 @@ Disponemos de un API REST para gestionar imágenes. Cada imagen tiene esta estru
 ```json
 
 {
-    "id": 1
+    "id": 1,
     "position": 1,
     "title": "Una foto",
     "url": "http://fotos.org/unafoto.jpg"
