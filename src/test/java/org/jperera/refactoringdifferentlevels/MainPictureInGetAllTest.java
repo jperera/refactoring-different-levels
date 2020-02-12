@@ -27,8 +27,9 @@ public class MainPictureInGetAllTest {
 
     @Test
     void uniquePictureIsMainPicture() throws Exception {
+        String version = null; // What version?
         String response = mockMvc.perform(
-                post("/pictures")
+                post("/" + version +"/pictures")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
                         .content(aRequest()
@@ -43,7 +44,7 @@ public class MainPictureInGetAllTest {
         Integer pictureId = reader(response).id();
 
         mockMvc.perform(
-                get("/pictures")
+                get("/" + version +"/pictures")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
 

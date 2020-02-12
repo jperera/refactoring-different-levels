@@ -27,7 +27,7 @@ class RefactoringDifferentLevelsApplicationTests {
 	@Test
 	void getOnePreviousCreatedPicture() throws Exception {
 		String response = mockMvc.perform(
-				post("/pictures")
+				post("/v1/pictures")
 						.contentType(MediaType.APPLICATION_JSON)
 						.accept(MediaType.APPLICATION_JSON)
 						.content(aRequest()
@@ -42,7 +42,7 @@ class RefactoringDifferentLevelsApplicationTests {
 		Integer pictureId = reader(response).id();
 
 		mockMvc.perform(
-		        get("/pictures/" + pictureId)
+		        get("/v1/pictures/" + pictureId)
                     .contentType(MediaType.APPLICATION_JSON)
                     .accept(MediaType.APPLICATION_JSON)
 
